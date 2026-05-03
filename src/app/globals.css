@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:     #F2F4F6;
+  --card:   #FFFFFF;
+  --card-2: #F7F8FA;
+  --bd:     rgba(0, 0, 0, 0.06);
+  --bd2:    rgba(0, 0, 0, 0.10);
+  --t1:     #191F28;
+  --t2:     #6B7684;
+  --t3:     #ADB5BD;
+  --green:  #12B76A;
+  --blue:   #3B7FE8;
+  --red:    #E53E4D;
+  --accent: #3182F6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--t1);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 카드 공통 스타일 */
+.metric-card {
+  padding: 18px 0;
+}
+
+/* 카드 컨테이너 — 세로 리스트 */
+.cards-list {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.cards-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Range input */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  background: var(--bd2);
+  height: 3px;
+  border-radius: 2px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  margin-top: -6.5px;
+  box-shadow: 0 0 0 3px rgba(49, 130, 246, 0.2);
+  transition: box-shadow 0.15s ease;
+}
+
+input[type='range']:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 5px rgba(49, 130, 246, 0.25);
+}
+
+input[type='range']::-moz-range-track {
+  background: var(--bd2);
+  height: 3px;
+  border-radius: 2px;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 3px rgba(49, 130, 246, 0.2);
+}
+
+input[type='range']::-moz-range-progress {
+  background: var(--accent);
+  height: 3px;
+  border-radius: 2px;
+}
