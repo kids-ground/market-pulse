@@ -38,9 +38,11 @@ src/hooks/        useAnimatedValue.ts  ← RAF ease-out cubic 480ms 애니메이
 | `--accent` | `#3182F6` | 슬라이더·연도·$100 강조 |
 
 ### 레이아웃
-- `100dvh` no-scroll · flex column (Header→Selector→Cards→ContextBar) · `max-w-[480px]`
-- Cards: 세로 리스트 (`flex-direction: column; gap: 10px; flex: 1; min-h-0; overflow-y: auto`)
-- 카드: 배경색·보더·그림자 없음, `padding: 18px 0`만 적용
+- `100dvh` no-scroll · flex column (ContextBar→Header→ScrollArea) · `max-w-[480px]`
+- ScrollArea: `flex: 1; min-height: 0; overflow-y: auto` — HeroCard + Comparison Section 포함
+- **섹션 간 기본 간격: `48px`**
+- HeroCard: 배경 없음, 풀너비 스파크라인
+- Comparison cards: 각각 흰색 카드 (`background: var(--card); border-radius: 14px; padding: 12px 16px`)
 
 ## 데이터 기준 (2026-04-30)
 `SP_NOW = 7254.19` · `NQ_NOW = 25129`  

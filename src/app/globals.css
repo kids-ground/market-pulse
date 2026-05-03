@@ -36,7 +36,15 @@ body {
 
 /* 카드 공통 스타일 */
 .metric-card {
-  padding: 18px 0;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 12px 16px;
+  transition: transform 0.15s ease;
+  cursor: pointer;
+}
+
+.metric-card:hover {
+  transform: scale(1.02);
 }
 
 /* 카드 컨테이너 — 세로 리스트 */
