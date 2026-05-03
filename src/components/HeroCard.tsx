@@ -144,7 +144,7 @@ export function HeroCard({ type, value, pct, pctLabel, sparkData, source, years 
         {formatDollar(animValue)}
       </div>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', marginBottom: '16px' }}>
-        <span style={{ color: accentCss, fontSize: '1.2rem', fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>
+        <span style={{ color: accentCss, fontSize: '1.2rem', fontWeight: 700, fontVariantNumeric: 'tabular-nums', opacity: 0.7 }}>
           {pctSign}{Math.abs(animPct).toFixed(1)}%
         </span>
         <span style={{ color: 'var(--t3)', fontSize: '0.7rem' }}>*{pctLabel}</span>

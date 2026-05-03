@@ -36,10 +36,10 @@ export function MetricCard({ type, label, value, pct, source, onClick }: MetricC
           {source}
         </p>
       </div>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
         <span style={{
           fontFamily: 'var(--font-inter), sans-serif',
-          fontSize: '1.15rem',
+          fontSize: '1rem',
           fontWeight: 700,
           letterSpacing: '-0.02em',
           fontVariantNumeric: 'tabular-nums',
@@ -47,8 +47,8 @@ export function MetricCard({ type, label, value, pct, source, onClick }: MetricC
         }}>
           {formatDollar(animValue)}
         </span>
-        <span style={{ color: accentCss, fontSize: '0.9rem', fontWeight: 600, fontVariantNumeric: 'tabular-nums' }}>
-          ({pctSign}{Math.abs(animPct).toFixed(1)}%)
+        <span style={{ color: accentCss, fontSize: '0.78rem', fontWeight: 600, fontVariantNumeric: 'tabular-nums', opacity: 0.7 }}>
+          {pctSign}{Math.abs(animPct).toFixed(1)}%
         </span>
       </div>
     </div>
