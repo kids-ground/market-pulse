@@ -59,30 +59,30 @@ export default function Home() {
 
   return (
     <main
-      className="flex flex-col mx-auto w-full px-4 py-5 sm:px-6 md:px-8"
+      className="flex flex-col mx-auto w-full px-4 sm:px-6 md:px-8"
       style={{ maxWidth: '540px', minWidth: '320px', height: '100dvh', overflow: 'hidden' }}
     >
-      <ContextBar />
-
-      {/* Title */}
-      <header className="mb-12 shrink-0">
-        <h1 style={{
-          fontFamily: 'var(--font-inter), var(--font-noto), sans-serif',
-          fontWeight: 800,
-          fontSize: 'clamp(1.1rem, 3.4vw, 1.5rem)',
-          letterSpacing: '-0.025em',
-          color: 'var(--t1)',
-          lineHeight: 1.5,
-        }}>
-          <button style={inlineBtnStyle} onClick={() => setYearSheetOpen(true)}>{years}년 전</button>
-          {', $100 를'}<br />
-          <button style={inlineBtnStyle} onClick={() => setAssetSheetOpen(true)}>{assetButtonLabel}</button>
-          {' 했더라면?'}
-        </h1>
-      </header>
-
       {/* Scrollable area */}
-      <div style={{ flex: 1, minHeight: 0, overflowY: 'auto', scrollbarWidth: 'none' }}>
+      <div style={{ flex: 1, minHeight: 0, overflowY: 'auto', scrollbarWidth: 'none', paddingTop: '20px', paddingBottom: '20px' }}>
+
+        <ContextBar />
+
+        {/* Title */}
+        <header className="mb-12">
+          <h1 style={{
+            fontFamily: 'var(--font-inter), var(--font-noto), sans-serif',
+            fontWeight: 800,
+            fontSize: 'clamp(1.3rem, 4.5vw, 1.6rem)',
+            letterSpacing: '-0.025em',
+            color: 'var(--t1)',
+            lineHeight: 1.5,
+          }}>
+            <button style={inlineBtnStyle} onClick={() => setYearSheetOpen(true)}>{years}년 전</button>
+            {', $100 를'}<br />
+            <button style={inlineBtnStyle} onClick={() => setAssetSheetOpen(true)}>{assetButtonLabel}</button>
+            {' 했더라면?'}
+          </h1>
+        </header>
 
         {/* Hero Card */}
         <HeroCard
