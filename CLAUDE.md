@@ -61,8 +61,13 @@ src/hooks/        useAnimatedValue.ts  ← RAF ease-out cubic 480ms 애니메이
 - 예: `UI 개선: 버튼 대시 밑줄, MetricCard 수익률 스타일 조정`
 
 ### 브랜치
-- 기본 작업 브랜치: `main`
-- 큰 기능 개발 시 feature 브랜치 생성 후 PR → main 병합
+| prefix | 용도 | 예시 |
+|--------|------|------|
+| `feat/` | 새 기능 추가·개선 | `feat/bitcoin-asset` |
+| `bug/` | 버그 수정 | `bug/sparkline-clip` |
+
+- 브랜치명은 **영문 소문자 + 하이픈**
+- 작업 완료 후 PR → main 병합, 브랜치 삭제
 
 ### 기타
 - 커밋 전 TypeScript 에러·콘솔 경고 없는지 확인
